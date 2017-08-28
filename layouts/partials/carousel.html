@@ -1,0 +1,20 @@
+{{ if isset .Site.Params "carousel" }}
+{{ if .Site.Params.carousel.enable }}
+{{ if gt (len .Site.Data.carousel) 0 }}
+  <div class="slider-section">
+    <div class="slider-active owl-carousel">
+      {{ range sort .Site.Data.carousel "weight" }}
+        <div class="single-slider slider-screen nrbop bg-black-alfa-40" style="background-image: url({{ .image }});">
+          <div class="container">
+            <div class="slider-content text-white">
+              <h2 class="b_faddown1 cd-headline clip is-full-width" >{{ .title }}</h2>
+                {{ .description | safeHTML }}
+            </div>
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+{{end}}
+{{end}}
+{{end}}

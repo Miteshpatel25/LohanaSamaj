@@ -1,0 +1,36 @@
+<div class="volunteers-wrapper images-gallery-wrapper">
+  <div class="container">
+    <div class="section-name one">
+      <h2>Gallery</h2>
+      <div class="short-text">
+        <h5>boridiatat non proident sunt in culpa qui officia</h5>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="gallery-wrapper clearfix">
+          <div class="nivo-activator"></div>
+      {{ range sort .Site.Data.gallery "weight" }}
+        <!-- <div class="col-sm-4 images-outer ">
+          <div class="images-inner  ">
+            <div class="nivo-activator"></div>
+            <div class="images single-images-gl clearfix">
+              <a href="{{ .image }}" class="nivo-trigger" data-lightbox-gallery="gallery1"><span class="fa fa-arrows-alt"></span><img src="{{ .image }}" alt=""></a>
+            </div>
+          </div>
+        </div> -->
+        <div class="gallery-image">
+          <div class="image two">
+            <a href="{{ .image }}" class="nivo-trigger" data-lightbox-gallery="gallery1">
+              <span><i class="fa fa-arrows-alt"></i></span>
+              <img src="{{ .image }}" alt="" style="width:270px;height:270px;">
+            </a>
+          </div>
+        </div>
+      {{ end }}
+    </div>
+    </div>
+    </div>
+    </div>
+  </div>
+</div>

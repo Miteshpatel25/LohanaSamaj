@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Volunters on Lohana Samaj</title>
+    <link>https://lohana.netlify.com/volunter/</link>
+    <description>Recent content in Volunters on Lohana Samaj</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Copyright ©2017 Lohana Samaj. All Rights Reserved</copyright>
+    
+	<atom:link href="https://lohana.netlify.com/volunter/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Volunter</title>
+      <link>https://lohana.netlify.com/volunter/volunter/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lohana.netlify.com/volunter/volunter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Volunter</title>
+      <link>https://lohana.netlify.com/volunter/volunter2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lohana.netlify.com/volunter/volunter2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Volunter</title>
+      <link>https://lohana.netlify.com/volunter/volunter3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lohana.netlify.com/volunter/volunter3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Volunter</title>
+      <link>https://lohana.netlify.com/volunter/volunter4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lohana.netlify.com/volunter/volunter4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Volunter</title>
+      <link>https://lohana.netlify.com/volunter/volunter5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lohana.netlify.com/volunter/volunter5/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

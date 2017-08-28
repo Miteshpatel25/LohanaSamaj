@@ -1,0 +1,80 @@
+<div class="about-page-wrapper">
+  <div class="description container">
+    <div class="row ">
+      <div class="col-md-6 ">
+        <div class="image-wrapper">
+          <img class="img-responsive" src="{{ .Site.BaseURL }}img/featured-image-11.png" alt="">
+        </div>
+      </div>
+      <div class="col-md-6 ">
+        <div class="about-right-text">
+          <div class="widget-title">
+            <h4>Hi We Provide Worldwide Charity Service Since 1978</h4>
+          </div>
+          <p class="first">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus sapiente deleniti commodi provident veniam vitae blanditiis rerum temporibus totam est, omnis sint excepturi maiores iure similique. Sequi magni, suscipit laudantium velit. Excepturi sint placeat vel, porro, saepe ratione sunt natus, quod rem error ipsum ipsa.</p>
+          <p class="second">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga voluptates dolor reprehenderit, deserunt, quibusdam repellat architecto blanditiis a, nulla inventore minima necessitatibus illum molestias, quas molestiae maiores tempora temporibus incidunt ea! Voluptate temporibus repellat nulla omnis nesciunt illum odit dicta fuga id!</p>
+          <a href="#" class="btn btn-min btn-secondary"><span>Learn More</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- team -->
+  <div class="team-wrapper">
+    <div class="container">
+      <div class="section-name one">
+        <h2>our volunteers</h2>
+        <div class="short-text">
+          <h5>We are all times support them for their smile</h5>
+        </div>
+      </div>
+
+      <div class="team-members row">
+        {{ range (where .Site.Pages "Section" "volunter") }}
+          {{ if eq .Title "Volunters" }}
+
+          {{ else }}
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="single-member" style="">
+                <div class="best-volunteer" style="padding:20px">
+                  <div class="voluntee-image">
+                    <a href="{{ .Permalink }}" title="{{ .Params.personname }}"><img src="{{ .Params.image }}" alt="{{ .Params.personname }}"></a>
+                  </div>
+                  <ul class="socials">
+                        <li><a href="" target="_blank" title=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="" target="_blank" title=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                  </ul>
+                  <span><a href="{{ .Permalink }}" title="{{ .Params.postname }}">{{ .Params.postname }}</a></span>
+                  <h2><a href="{{ .Permalink }}" title="{{ .Params.personname }}">{{ .Params.personname }}</a></h2>
+                  <p>{{ .Description }}</p>
+                </div>
+              </div>
+            </div>
+          {{end}}
+        {{ end }}
+      </div>
+    </div>
+  </div>
+  <div class="partners">
+    <div class="container">
+      <div class="row">
+        <div id="partners-slider" class="owl-carousel owl-theme owl-transition clearfix">
+          <div class="item">
+            <a href="#"><img class="img-responsive" src="{{ .Site.BaseURL }}img/others/logo-1.png" alt=""></a>
+          </div>
+          <div class="item">
+            <a href="#"><img class="img-responsive" src="{{ .Site.BaseURL }}img/others/logo-3.png" alt=""></a>
+          </div>
+          <div class="item">
+            <a href="#"><img class="img-responsive" src="{{ .Site.BaseURL }}img/others/logo-2.png" alt=""></a>
+          </div>
+          <div class="item">
+            <a href="#"><img class="img-responsive" src="{{ .Site.BaseURL }}img/others/logo-4.png" alt=""></a>
+          </div>
+          <div class="item">
+          <a href="#"><img class="img-responsive" src="{{ .Site.BaseURL }}img/others/logo-5.png" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

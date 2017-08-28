@@ -1,0 +1,65 @@
+baseurl = "https://lohana.netlify.com/"
+title = "Lohana Samaj"
+defaultContentLanguage = "en"
+disqusShortname = "devcows"
+googleAnalytics = ""
+paginate = 10
+
+[menu]
+
+  [[menu.main]]
+      name = "Home"
+      url  = "/"
+      weight = 1
+
+  [[menu.main]]
+      name = "Gallery"
+      url  = "/gallery/"
+      weight = 2
+
+  [[menu.main]]
+      name = "About Us"
+      url  = "/about/"
+      weight = 3
+
+  # [[menu.main]]
+  #     name = "Blog"
+  #     url  = "/blog/"
+  #     identifier = "blogs"
+  #     weight = 4
+  #
+  # [[menu.main]]
+  #     name = "Blog List"
+  #     url  = "/bloglist/"
+  #     parent = "blogs"
+  #     weight = 5
+  #
+  # [[menu.main]]
+  #     name = "Blog Singles"
+  #     url  = "/blogsingle/"
+  #     parent = "blogs"
+  #     weight = 6
+
+  [[menu.main]]
+      name = "Contact"
+      url  = "/contact/"
+      weight = 4
+
+[params]
+      logo = "img/logo.png"
+      date_format = "January 2, 2006"
+      author = "Lohana Samaj"
+      sitetitle = "Lohana Samaj"
+      email = "milanchodvadiya@gmail.com"
+      tweeterprofile = "https://twitter.com/"
+      facebookprofile = "https://en-gb.facebook.com/"
+      googleplus = "https://plus.google.com/"
+      linkedin = "https://in.linkedin.com/"
+      skype = "https://www.skype.com/en/"
+      copyright = "Copyright ©2017 Lohana Samaj. All Rights Reserved"
+      staticimageheader = "Let’s Work Togather!!"
+      staticimagetagline = "Give a little &amp; change a lot."
+      footerlogotext = "At vero eos et accusamus et iusto odio dignis simos ducimus qui blanditiis praesentiumlo volupt"
+
+[params.carousel]
+      enable = true

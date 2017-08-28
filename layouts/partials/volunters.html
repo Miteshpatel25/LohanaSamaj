@@ -1,0 +1,34 @@
+<div class="team-wrapper">
+  <div class="container">
+    <div class="section-name one">
+      <h2>our volunteers</h2>
+      <div class="short-text">
+        <h5>We are all times support them for their smile</h5>
+      </div>
+    </div>
+    <div class="team-members row">
+      {{ range (where .Site.Pages "Section" "volunter") }}
+        {{ if eq .Title "Volunters" }}
+
+        {{ else }}
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="single-member" style="">
+              <div class="best-volunteer" style="padding:20px">
+                <div class="voluntee-image">
+                  <a href="{{ .Permalink }}" title="{{ .Params.personname }}"><img src="{{ .Params.image }}" alt="{{ .Params.personname }}"></a>
+                </div>
+                <ul class="socials">
+                      <li><a href="" target="_blank" title=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                      <li><a href="" target="_blank" title=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                </ul>
+                <span><a href="{{ .Permalink }}" title="{{ .Params.postname }}">{{ .Params.postname }}</a></span>
+                <h2><a href="{{ .Permalink }}" title="{{ .Params.personname }}">{{ .Params.personname }}</a></h2>
+                <p>{{ .Description }}</p>
+              </div>
+            </div>
+          </div>
+        {{end}}
+      {{ end }}
+    </div>
+  </div>
+</div>

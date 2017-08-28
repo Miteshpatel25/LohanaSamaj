@@ -1,0 +1,50 @@
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-sm-6">
+        <div class="about widget clearfix">
+          <div class="logo-wrap">
+            <a href="{{ .Site.BaseURL }}">{{ $.Site.Params.sitetitle }}</a>
+          </div>
+          <p>{{ $.Site.Params.footerlogotext }}</p>
+          <div class="social-media-icons">
+            <a href="{{ $.Site.Params.tweeterprofile }}" target="_blank"><i class="fa fa-twitter"></i><span>Twitter</span></a>
+            <a href="{{ $.Site.Params.googleplus }}" target="_blank"><i class="fa fa-google-plus"></i><span>Google +</span></a>
+            <a href="{{ $.Site.Params.facebookprofile }}" target="_blank"><i class="fa fa-facebook"></i><span>Facebook</span></a>
+            <a href="{{ $.Site.Params.linkedin }}" target="_blank"><i class="fa fa-linkedin"></i><span>Linkedin</span></a>
+            <a href="{{ $.Site.Params.skype }}" target="_blank"><i class="fa fa-skype"></i><span>Skype</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-7 col-sm-6 ">
+        <div class="quick-links widget clearfix">
+          <h4 class="title"></h4>
+
+        </div>
+      </div>
+      <div class="col-md-2 col-sm-6">
+        <div class="quick-links widget clearfix">
+          <h4 class="title">Quick Links</h4>
+          <div class="links">
+            {{ range .Site.Menus.main }}
+              {{ if .HasChildren }}
+                  <a href="{{ .URL }}"><i class="fa fa-angle-double-right"></i>{{ .Name }}</a>
+                  {{ range .Children }}
+                      <a href="{{ .URL }}"><i class="fa fa-angle-double-right"></i>{{ .Name }}</a>
+                  {{end}}
+              {{else}}
+                  <a href="{{ .URL }}"><i class="fa fa-angle-double-right"></i>{{ .Name }}</a>
+              {{end}}
+            {{end}}
+          </div>
+        </div>
+        <div style="" id="google_translate_element"></div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bar">
+    <div class="container">
+      <h5>{{ $.Site.Params.copyright }}</h5>
+    </div>
+  </div>
+</footer>
