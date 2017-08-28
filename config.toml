@@ -21,6 +21,10 @@ paginate = 10
       name = "About Us"
       url  = "/about/"
       weight = 3
+  [[menu.main]]
+      name = "Join Us"
+      url  = "/joinus/"
+      weight = 4
 
   # [[menu.main]]
   #     name = "Blog"

@@ -169,38 +169,66 @@
     });
 
     /* --- Google Map --- */
+    var locations = [
+          ['Adajan Gam', 21.1892539, 72.7876768],
+          ['Pal Gam', 21.1961855, 72.7618497],
+          ['Kapodra', 21.2206235, 72.8733662]
+        ];
 
-	var mapLocation = new google.maps.LatLng(21.1892539,72.7876768);
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 10,
+          center: new google.maps.LatLng(21.1591857, 72.7520842),
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        });
 
-	var $mapis = $('#map');
+        var infowindow = new google.maps.InfoWindow();
 
-	if ($mapis.length > 0) {
+        var marker, i;
 
-		var map;
-		map = new GMaps({
-			streetViewControl : true,
-			overviewMapControl: true,
-			mapTypeControl: true,
-			zoomControl : true,
-			panControl : true,
-			scrollwheel: false,
-			center: mapLocation,
-			el: '#map',
-			zoom: 12,
-			styles: [{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","stylers":[{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"saturation":-100},{"lightness":30},{"visibility":"on"}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":100},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":-25},{"saturation":-100}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]}]
-		});
+        for (i = 0; i < locations.length; i++) {
+          marker = new google.maps.Marker({
+            position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+            map: map
+          });
 
-		var image = new google.maps.MarkerImage('/img/map-icon.png');
-
-		map.addMarker({
-			position: mapLocation,
-			title: 'Lohana Samaj',
-			infoWindow: {
-				content: '<p><strong>Lohana Samaj</strong><address>White Orchid</address></p>'
-			}
-		});
-
-	}
+          google.maps.event.addListener(marker, 'click', (function(marker, i) {
+            return function() {
+              infowindow.setContent(locations[i][0]);
+              infowindow.open(map, marker);
+            }
+          })(marker, i));
+        }
+	// var mapLocation = new google.maps.LatLng(21.1892539,72.7876768);
+  //
+	// var $mapis = $('#map');
+  //
+	// if ($mapis.length > 0) {
+  //
+	// 	var map;
+	// 	map = new GMaps({
+	// 		streetViewControl : true,
+	// 		overviewMapControl: true,
+	// 		mapTypeControl: true,
+	// 		zoomControl : true,
+	// 		panControl : true,
+	// 		scrollwheel: false,
+	// 		center: mapLocation,
+	// 		el: '#map',
+	// 		zoom: 12,
+	// 		styles: [{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","stylers":[{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"saturation":-100},{"lightness":30},{"visibility":"on"}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":100},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":-25},{"saturation":-100}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]}]
+	// 	});
+  //
+	// 	var image = new google.maps.MarkerImage('/img/map-icon.png');
+  //
+	// 	map.addMarker({
+	// 		position: mapLocation,
+	// 		title: 'Lohana Samaj',
+	// 		infoWindow: {
+	// 			content: '<p><strong>Lohana Samaj</strong><address>White Orchid</address></p>'
+	// 		}
+	// 	});
+  //
+	// }
 
 
 
