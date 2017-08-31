@@ -64,6 +64,7 @@ paginate = 10
       staticimageheader = "Let’s Work Togather!!"
       staticimagetagline = "Give a little &amp; change a lot."
       footerlogotext = "At vero eos et accusamus et iusto odio dignis simos ducimus qui blanditiis praesentiumlo volupt"
+      serverurl = "http://192.168.0.3:8080/api/v1/"
 
 [params.carousel]
       enable = true
